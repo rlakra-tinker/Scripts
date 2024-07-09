@@ -31,6 +31,7 @@ echo
 ln -sf "${OSX_DIR}/checkPortUsage.sh" ~/checkPortUsage
 ln -sf "${OSX_DIR}/delFilesRecursively.sh" ~/delFilesRecursively
 ln -sf "${OSX_DIR}/showComputerName.sh" ~/showComputerName
+ln -sf "${OSX_DIR}/delRecursively.sh" ~/delRecursively
 
 # ----------------< Git Links >----------------
 ln -sf "${GIT_DIR}/addSSHKeys.sh" ~/addSSHKeys
