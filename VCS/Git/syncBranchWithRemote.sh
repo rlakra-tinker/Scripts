@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Rohtash Lakra
-#
+# Your local branch is now an exact copy (commits and all) of the remote branch.
 REMOTE_BRANCH=$1
 echo
 echo "Syncing local branch with remote [${REMOTE_BRANCH}] branch ..."
