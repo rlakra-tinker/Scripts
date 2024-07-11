@@ -38,6 +38,7 @@ ln -sf "${GIT_DIR}/addSSHKeys.sh" ~/addSSHKeys
 ln -sf "${GIT_DIR}/logGitCommits.sh" ~/logGitCommits
 ln -sf "${GIT_DIR}/removeBranch.sh" ~/removeGitBranch
 ln -sf "${GIT_DIR}/syncBranches.sh" ~/syncBranches
+ln -sf "${GIT_DIR}/syncBranchWithRemote.sh" ~/syncBranchWithRemote
 ln -sf "${GIT_DIR}/tagBranch.sh" ~/tagGitBranch
 
 # ----------------< Variables >----------------
