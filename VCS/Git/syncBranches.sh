@@ -1,26 +1,29 @@
 #!/bin/bash
 # Author: Rohtash Lakra
 #
-BRANCHES_HOME=$PWD
+CURR_DIR=$PWD
+WORKSPACE_DIR="${HOME}/Workspace"
 echo
-echo "Syncing ${BRANCHES_HOME} ..."
+echo "Syncing ${WORKSPACE_DIR} ..."
 echo
 folders="tod-admin tod-backend tod-frontend tod-mobile-qa tod-quicksight tod-readme tod-versioning-poc tod-webhook"
-#for entry in "${BRANCHES_HOME}"/*
 for entry in $folders
 do
-  if [[ -d "$entry" ]]; then
+  pathEntry="${WORKSPACE_DIR}/${entry}"
+  if [[ -d "${pathEntry}" ]]; then
       echo
-      echo "${BRANCHES_HOME}/${entry}"
+      echo "Syncing [${pathEntry}] ..."
+      echo
       cd "$entry"
       git reset --hard
       git config pull.ff only
       git pull
       cd ..
       echo
-  #else
-  #    echo "$entry is not a directory"
+  else
+      echo "${pathEntry} is not a directory"
   fi
 done
+cd $CURR_DIR
 echo
 
