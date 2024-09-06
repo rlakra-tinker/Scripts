@@ -2,5 +2,8 @@
 # Author: Rohtash Lakra
 # Display Port Usage
 #
-sudo lsof -i tcp:8080
+echo
+PORT=${1:8080}
+echo "Checking ${PORT} port usage"
+sudo lsof -i tcp:$PORT
 echo

@@ -6,7 +6,7 @@ WORKSPACE_DIR="${HOME}/Workspace"
 echo
 echo "Syncing ${WORKSPACE_DIR} ..."
 echo
-folders="tod-admin tod-backend tod-frontend tod-mobile-qa tod-quicksight tod-readme tod-versioning-poc tod-webhook"
+folders="tod-admin tod-backend tod-frontend tod-iac tod-mobile-qa tod-quicksight tod-readme tod-versioning-poc tod-webhook"
 for entry in $folders
 do
   pathEntry="${WORKSPACE_DIR}/${entry}"
