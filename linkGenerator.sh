@@ -35,6 +35,7 @@ ln -sf "${OSX_DIR}/showComputerName.sh" ~/showComputerName
 # ln -sf "${OSX_DIR}/delRecursively.sh" ~/delRecursively
 
 # ----------------< Docker Links >----------------
+ln -sf "${DOCKER_DIR}/buildDockerImage.sh" ~/buildDockerImage
 ln -sf "${DOCKER_DIR}/listDockerImages.sh" ~/listDockerImages
 ln -sf "${DOCKER_DIR}/sshDockerImage.sh" ~/sshDockerImage
 
