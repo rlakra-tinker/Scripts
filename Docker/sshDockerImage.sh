@@ -3,7 +3,7 @@
 clear
 echo
 HOME_DIR=$PWD
-IMAGE_ID=${1-:""}
+IMAGE_ID=${1:-""}
 echo
 
 # Usage

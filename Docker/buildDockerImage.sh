@@ -7,9 +7,10 @@
 clear
 echo
 HOME_DIR=$PWD
-TAG_NAME=${1-:""}
-DOCKER_FILE=${2-:"Dockerfile"}
+TAG_NAME=${1:-""}
+DOCKER_FILE=${2:-"Dockerfile"}
 echo
+echo "HOME_DIR=${HOME_DIR}, TAG_NAME=${TAG_NAME}, DOCKER_FILE=${DOCKER_FILE}"
 
 # Usage
 usage() {
@@ -19,7 +20,7 @@ usage() {
    echo "TagName    - Tag for the docker image"
    echo "DockerFile - Dockerfile for building an image"
    echo
-   echo "Example: ~/buildDockerImage tod/be-alpine infra/be/Dockerfile"
+   echo "Example: ~/buildDockerImage tod/be infra/be/Dockerfile"
    echo
 }
 

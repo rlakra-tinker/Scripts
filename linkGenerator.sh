@@ -10,6 +10,7 @@ export APPS_DIR="/Applications"
 export WORKSPACE="${USER_HOME}/Workspace"
 export SCRIPTS="${WORKSPACE}/Scripts"
 export BUILD_TOOLS="${SCRIPTS}/BuildTools"
+export AWS_DIR="${SCRIPTS}/AWS"
 export DOCKER_DIR="${SCRIPTS}/Docker"
 export MY_OS_CONFIGS="${SCRIPTS}/MyOSConfigs"
 export OSX_DIR="${SCRIPTS}/OS/OSX"
@@ -33,6 +34,9 @@ ln -sf "${OSX_DIR}/checkPortUsage.sh" ~/checkPortUsage
 ln -sf "${OSX_DIR}/delFilesRecursively.sh" ~/delFilesRecursively
 ln -sf "${OSX_DIR}/showComputerName.sh" ~/showComputerName
 # ln -sf "${OSX_DIR}/delRecursively.sh" ~/delRecursively
+
+# ----------------< AWS Links >----------------
+ln -sf "${AWS_DIR}/sshInstance.sh" ~/sshInstance
 
 # ----------------< Docker Links >----------------
 ln -sf "${DOCKER_DIR}/buildDockerImage.sh" ~/buildDockerImage
