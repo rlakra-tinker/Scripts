@@ -69,6 +69,3 @@ ln -sf "${SYNCRO_SVN_CLIENT}/diffDirsMac.sh" ~/diffFolders
 # move back to current dir
 cd $CUR_DIR
 echo
-
---------
-lrwxr-xr-x   1 tinker  staff      65 Jul  9 12:10 delSpamFilesRecursively -> /Users/tinker/Workspace/Scripts/OS/OSX/delSpamFilesRecursively.sh
