@@ -36,7 +36,7 @@ if [[ -z "$1" ]]; then  # No Arguments Supplied
             find . -type f -name "${entry}" -print -exec rm -rf {} \;
             echo
 #        elif [[ "${entry:0:2}" == "__" && "${entry:9:11}"  == "__" ]]; then
-        elif [[ "${entry}" == "__pycache__" ]]; then
+        elif [[ "${entry}" == "__pycache__" || "${entry}" == "venv" ]]; then
             echo "Removing '${entry}' folders recursively ..."
             echo
 #            sudo find "${HOME_DIR}" -type d -name "${entry}" -print -exec rm -rf {} \;
