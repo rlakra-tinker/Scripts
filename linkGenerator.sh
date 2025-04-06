@@ -58,9 +58,8 @@ ln -fs "${MY_OS_CONFIGS}/backUpLocalConfigs.sh" ~/backUpLocalConfigs
 # ----------------<OSX Links>----------------
 export OSX_DIR="${SCRIPTS}/OS/OSX"
 ln -fs "${OSX_DIR}/checkPortUsage.sh" ~/checkPortUsage
-ln -fs "${OSX_DIR}/delFilesRecursively.sh" ~/delFilesRecursively
 ln -fs "${OSX_DIR}/showComputerName.sh" ~/showComputerName
-# ln -fs "${OSX_DIR}/delRecursively.sh" ~/delRecursively
+ln -fs "${OSX_DIR}/delRecursively.sh" ~/delRecursively
 
 # ----------------<Variables>----------------
 
