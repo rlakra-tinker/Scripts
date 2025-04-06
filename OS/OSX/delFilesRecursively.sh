@@ -20,7 +20,7 @@ usage() {
 }
 
 # files/folders to be removed
-fileExtensions=".DS_Store __pycache__"
+fileExtensions=".DS_Store __pycache__ .pyc .pyo"
 # check which files/folders to remove
 if [[ -z "$1" ]]; then  # No Arguments Supplied
     for entry in $fileExtensions; do
@@ -35,10 +35,12 @@ if [[ -z "$1" ]]; then  # No Arguments Supplied
             # find . -type f -name "${entry}" -print -exec echo {} \;
             find . -type f -name "${entry}" -print -exec rm -rf {} \;
             echo
-        elif [[ "${entry:0:2}" == "__" && "${entry:9:11}"  == "__" ]]; then
+#        elif [[ "${entry:0:2}" == "__" && "${entry:9:11}"  == "__" ]]; then
+        elif [[ "${entry}" == "__pycache__" ]]; then
             echo "Removing '${entry}' folders recursively ..."
             echo
-            sudo find "${HOME_DIR}" -type d -name "${entry}" -print -exec rm -rf {} \;
+#            sudo find "${HOME_DIR}" -type d -name "${entry}" -print -exec rm -rf {} \;
+            sudo find "${HOME_DIR}" -type d -path "*/${entry}" -print -exec rm -rf {} \;
             # Define the input file
 #            TEMP_FILE_PATH="${HOME_DIR}/fileTypes"
 #            echo "TEMP_FILE_PATH=${TEMP_FILE_PATH}"
