@@ -4,7 +4,7 @@
 CURR_DIR=$PWD
 WORKSPACE_DIR="${HOME}/Workspace"
 echo
-branches="develop master staging"
+branches="master staging develop"
 echo "Syncing ${WORKSPACE_DIR} ..."
 echo
 folders="tod-admin tod-backend tod-frontend tod-iac tod-mobile-qa tod-quicksight tod-readme tod-versioning-poc tod-webhook"
@@ -30,6 +30,7 @@ do
         git pull
         echo
       done
+      git checkout develop
       cd ..
       echo
   else

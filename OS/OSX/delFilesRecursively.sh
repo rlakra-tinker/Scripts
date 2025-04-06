@@ -23,7 +23,6 @@ usage() {
 fileExtensions=".DS_Store __pycache__"
 # check which files/folders to remove
 if [[ -z "$1" ]]; then  # No Arguments Supplied
-    # fileExtensions=".DS_Store __pycache__"
     for entry in $fileExtensions; do
         filePath="${HOME_DIR}/${entry}"
         # Folders
@@ -36,28 +35,30 @@ if [[ -z "$1" ]]; then  # No Arguments Supplied
             # find . -type f -name "${entry}" -print -exec echo {} \;
             find . -type f -name "${entry}" -print -exec rm -rf {} \;
             echo
-        elif [[ "${entry:0:2}" == "__" ]]; then
+        elif [[ "${entry:0:2}" == "__" && "${entry:9:11}"  == "__" ]]; then
             echo "Removing '${entry}' folders recursively ..."
             echo
+            sudo find "${HOME_DIR}" -type d -name "${entry}" -print -exec rm -rf {} \;
             # Define the input file
-            TEMP_FILE_PATH="${HOME_DIR}/fileTypes"
-            find "${HOME_DIR}" -type d -name "${entry}" > $TEMP_FILE_PATH
-            # ls -la "${TEMP_FILE_PATH}"
-            IFS=$'\n' # set the Internal Field Separator to newline
-            # read file contents
-            while read -r filePath; do
-                # printf '%s\n' "$filePath"
-                # check the path contains '/venv'
-                if [[ $filePath != *"${HOME_DIR}/venv"* ]]; then
-                #     # ignore 'venv' folder
-                #     echo "Ignoring [${filePath}] ..."
-                # else
-                    # echo "[${filePath}] ..."
-                    rm -rf "${filePath}"
-                fi
-            done < "$TEMP_FILE_PATH"
-            # remove temp file
-            rm "${TEMP_FILE_PATH}"
+#            TEMP_FILE_PATH="${HOME_DIR}/fileTypes"
+#            echo "TEMP_FILE_PATH=${TEMP_FILE_PATH}"
+#            find "${HOME_DIR}" -type d -name "${entry}" > $TEMP_FILE_PATH
+#            # ls -la "${TEMP_FILE_PATH}"
+#            IFS=$'\n' # set the Internal Field Separator to newline
+#            # read file contents
+#            while read -r filePath; do
+#                # printf '%s\n' "$filePath"
+#                # check the path contains '/venv'
+#                if [[ $filePath != *"${HOME_DIR}/venv"* ]]; then
+#                #     # ignore 'venv' folder
+#                #     echo "Ignoring [${filePath}] ..."
+#                # else
+#                    # echo "[${filePath}] ..."
+#                    rm -rf "${filePath}"
+#                fi
+#            done < "$TEMP_FILE_PATH"
+#            # remove temp file
+#            sudo rm -rf "${TEMP_FILE_PATH}"
         # else
         #     # Folders
         #     echo "Removing '${filePath}' folder ..."
