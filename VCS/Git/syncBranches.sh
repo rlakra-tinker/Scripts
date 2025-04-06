@@ -4,6 +4,7 @@
 CURR_DIR=$PWD
 WORKSPACE_DIR="${HOME}/Workspace"
 echo
+branches="develop master staging"
 echo "Syncing ${WORKSPACE_DIR} ..."
 echo
 folders="tod-admin tod-backend tod-frontend tod-iac tod-mobile-qa tod-quicksight tod-readme tod-versioning-poc tod-webhook"
@@ -16,8 +17,19 @@ do
       echo
       cd "$entry"
       git reset --hard
-      git config pull.ff only
-      git pull
+      for branch in $branches
+      do
+        pathEntry="${WORKSPACE_DIR}/${entry}"
+        echo
+        echo "Checking out [${branch}] ..."
+        echo
+        cd "$entry"
+        git checkout "$branch"
+        git reset --hard
+        git config pull.ff only
+        git pull
+        echo
+      done
       cd ..
       echo
   else
