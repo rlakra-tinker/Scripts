@@ -81,6 +81,14 @@ print(args)
 print(args.color)
 ````
 
+## Python Commands
+```shell
+cd /usercode/flaskapplication && export FLASK_APP=app.py && export FLASK_ENV=development && flask run --host=0.0.0.0
+
+flask run --host=0.0.0.0
+```
+
+
 
 # Reference
 

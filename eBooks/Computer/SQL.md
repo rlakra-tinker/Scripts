@@ -19,5 +19,33 @@
 
 
 
+## SQL Commands
+
+### Create SQL User & Grant Permissions
+```shell
+CREATE USER 'mysql-user'@'localhost' IDENTIFIED BY 'Local!MySql!User';
+GRANT ALL PRIVILEGES ON *.* TO 'mysql-user'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'mysql-user'@'localhost';
+```
+
+- Create SQL Example User & Grant Permissions
+```shell
+CREATE USER 'rslakra'@'localhost' IDENTIFIED BY 'MySql!Password';
+GRANT ALL PRIVILEGES ON posts.* TO 'rslakra'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'rslakra'@'localhost';
+```
+
+
+
 # Reference
 
+
+
+
+# Author
+
+---
+
+- Rohtash Lakra
