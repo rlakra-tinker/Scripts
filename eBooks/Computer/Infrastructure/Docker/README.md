@@ -1,8 +1,8 @@
-# eBooks
+# Kubernetes (K8S)
 
 ---
 
-The ```eBooks``` contains various learning materials.
+The ```Kubernetes (K8S)``` contains various learning materials.
 
 
 
@@ -19,28 +19,11 @@ The ```eBooks``` contains various learning materials.
     └── README.md
 ```
 
-# Tools
-
-- MySQL Connector
-- Gonicorn
-```shell
-workers = (cpu * 2) + 1
-```
-- Pinpoint Notification
-- HotSpot (SCM)
-- HubSpot
-- QuickSight
-- Iterable
-- Statsig
-- 
-
-
 
 
 # Reference
 
--
-
+-[Getting Started Todo App](https://github.com/docker/getting-started-todo-app)
 
 
 
