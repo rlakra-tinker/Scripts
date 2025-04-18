@@ -20,14 +20,19 @@ usage() {
 }
 
 # files/folders to be removed
-fileOrFolders=".DS_Store __pycache__ .pyc .pyo venv"
+listEntries=".DS_Store __pycache__ .pyc .pyo venv target build dist"
 # check which files/folders to remove
 if [[ -z "$1" ]]; then  # No Arguments Supplied
-    for entry in $fileOrFolders; do
+    for entry in $listEntries; do
         filePath="${HOME_DIR}/${entry}"
         # Folders
         echo "Analyzing '${entry}' under [${HOME_DIR}] ..."
         echo
+        if [[ -f "${filePath}" ]]; then # File
+          echo "${filePath} is a file."
+        elif [[ -d "${filePath}" ]]; then # Folder
+          echo "${filePath} is a folder."
+        fi
         if [[ "${entry:0:1}" == "." ]]; then
             # Files
             echo "Removing '${entry}' file(s) recursively ..."
@@ -36,7 +41,7 @@ if [[ -z "$1" ]]; then  # No Arguments Supplied
             find . -type f -name "${entry}" -print -exec rm -rf {} \;
             echo
 #        elif [[ "${entry:0:2}" == "__" && "${entry:9:11}"  == "__" ]]; then
-        elif [[ "${entry}" == "__pycache__" || "${entry}" == "venv" ]]; then
+        elif [[ "${entry}" == "__pycache__" || "${entry}" == "venv" || "${entry}" == "target" ]]; then
             echo "Removing '${entry}' folders recursively ..."
             echo
 #            sudo find "${HOME_DIR}" -type d -name "${entry}" -print -exec rm -rf {} \;
