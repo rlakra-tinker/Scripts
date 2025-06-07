@@ -48,7 +48,7 @@ ln -fs "${GIT_DIR}/addSSHKeys.sh" ~/addSSHKeys
 ln -fs "${GIT_DIR}/logGitCommits.sh" ~/logGitCommits
 ln -fs "${GIT_DIR}/removeBranch.sh" ~/removeGitBranch
 ln -fs "${GIT_DIR}/syncBranches.sh" ~/syncBranches
-ln -fs "${GIT_DIR}/syncBranchWithRemote.sh" ~/syncBranchWithRemote
+ln -fs "${GIT_DIR}/syncOriginBranches.sh" ~/syncOriginBranches
 ln -fs "${GIT_DIR}/tagBranch.sh" ~/tagGitBranch
 
 # ----------------<MyOSConfigs Links>----------------
