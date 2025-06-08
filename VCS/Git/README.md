@@ -2,7 +2,7 @@
 
 ---
 
-The ```Homebrew``` contains various build and installation scripts.
+The ```GitLab``` contains various build and installation scripts.
 
 
 
@@ -30,6 +30,24 @@ ssh-keygen -t ed25519 -C “email”
 eval "$(ssh-agent -s)"
 open ~/.ssh/config
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+- Config Settings (including multiple repos)
+```shell
+#Host github.com
+#  AddKeysToAgent yes
+#  UseKeychain yes
+#  IdentityFile ~/.ssh/id_ed25519
+
+Host work.github.com
+      HostName github.com
+      User rlakra-work
+      IdentityFile ~/.ssh/id_ed25519_work
+
+Host personal.github.com
+      HostName github.com
+      User rlakra-personal
+      IdentityFile ~/.ssh/id_ed25519_personal
 ```
 
 - Adding a new SSH key to your account ([Reference](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account))
