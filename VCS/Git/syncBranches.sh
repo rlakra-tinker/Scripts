@@ -7,8 +7,9 @@ echo
 branches="master staging develop"
 echo "Syncing ${WORKSPACE_DIR} ..."
 echo
-folders="tod-admin tod-ai tod-backend tod-frontend honda-service-call tod-iac Tod-DataService tod-mobile-qa tod-quicksight
-tod-readme tod-webhook tod-eks-config backend-e2e-tests tod-iac-hub tod-liquibase mobile-build-config tod-versioning-poc"
+folders="backend-e2e-tests frontend-shared honda-service-call honda_powersports mobile-build-config tod-admin tod-ai
+tod-appsync-lambda tod-backend tod-core Tod-DataService tod-eks-config tod-frontend tod-iac tod-iac-hub tod-liquibase
+ tod-mobile-qa tod-quicksight tod-readme tod-versioning-poc tod-webhook"
 for entry in $folders
 do
   pathEntry="${WORKSPACE_DIR}/${entry}"
