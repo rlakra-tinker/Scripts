@@ -26,7 +26,8 @@ do
         echo
 #        cd "$entry"
         git checkout "$branch"
-        git reset --hard
+        #git reset --hard
+        git reset --hard origin/$branch
         git config pull.ff only
         git pull
         echo
