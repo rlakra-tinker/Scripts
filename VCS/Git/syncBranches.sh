@@ -7,7 +7,7 @@ echo
 branches="master staging develop"
 echo "Syncing ${WORKSPACE_DIR} ..."
 echo
-folders="backend-e2e-tests frontend-shared honda-service-call honda_powersports mobile-build-config tod-admin tod-ai
+folders="backend-e2e-tests frontend-shared honda_powersports honda-service-call mobile-build-config tod-admin tod-ai
 tod-appsync-lambda tod-backend tod-core Tod-DataService tod-eks-config tod-frontend tod-iac tod-iac-hub tod-liquibase
  tod-mobile-qa tod-quicksight tod-readme tod-versioning-poc tod-webhook"
 for entry in $folders
